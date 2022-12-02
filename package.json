@@ -1,0 +1,67 @@
+{
+	"name": "used-pm",
+	"version": "1.0.0-alpha.1",
+	"description": "Detects what package manager executes the process",
+	"keywords": [
+		"npm",
+		"yarn",
+		"pnpm",
+		"package-manager"
+	],
+	"repository": "mheob/used-pm",
+	"funding": "https://github.com/sponsors/mheob",
+	"license": "MIT",
+	"author": "Alexander Böhm <tools@boehm.work>",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
+	"types": "./dist/index.d.ts",
+	"files": [
+		"./dist/"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"format": "prettier --write \"**/*.{cjs,js,mjs,ts,json,md,mdx,yaml,yml}\"",
+		"lint": "eslint . --ext .cjs,.js,.mjs,.ts --fix --ignore-path .gitignore",
+		"prepare": "ts-node ./scripts/prepare.ts && husky install"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"lint-staged": {
+		"*.{cjs,js,mjs,ts}": "eslint --fix",
+		"!(pnpm-)*.{cjs,js,mjs,ts,json,md,mdx,yaml,yml}": "pnpm exec prettier --write",
+		"package.json": "npx sort-package-json"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.3.0",
+		"@commitlint/config-conventional": "^17.3.0",
+		"@mheob/eslint-config": "^3.1.0",
+		"@mheob/prettier-config": "^2.0.3",
+		"@mheob/tsconfig": "^1.0.1",
+		"@types/node": "^18.11.10",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.4",
+		"ts-node": "^10.9.1",
+		"tsup": "^6.5.0",
+		"typescript": "^4.9.3"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"tsup": {
+		"clean": true,
+		"entry": [
+			"src/index.ts"
+		],
+		"format": [
+			"cjs",
+			"esm"
+		],
+		"dts": true
+	}
+}
