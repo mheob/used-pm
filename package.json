@@ -1,6 +1,6 @@
 {
 	"name": "used-pm",
-	"version": "1.0.0-alpha.1",
+	"version": "1.0.0-rc.1",
 	"description": "Detects what package manager executes the process",
 	"keywords": [
 		"npm",
