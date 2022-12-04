@@ -1,4 +1,4 @@
 {
 	"extends": "@mheob/tsconfig/commonjs",
-	"include": ["scripts/**/*", "src/**/*"]
+	"include": ["@types/**/*", "scripts/**/*", "src/**/*"]
 }
