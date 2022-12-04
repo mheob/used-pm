@@ -1,6 +1,6 @@
 {
 	"name": "used-pm",
-	"version": "1.0.0-rc.1",
+	"version": "1.0.0-rc.2",
 	"description": "Detects what package manager executes the process",
 	"keywords": [
 		"npm",
@@ -44,7 +44,7 @@
 		"@mheob/prettier-config": "^2.0.3",
 		"@mheob/tsconfig": "^1.0.1",
 		"@types/node": "^18.11.10",
-		"husky": "^8.0.0",
+		"husky": "^8.0.2",
 		"lint-staged": "^13.0.4",
 		"ts-node": "^10.9.1",
 		"tsup": "^6.5.0",
