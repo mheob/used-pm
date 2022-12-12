@@ -43,12 +43,14 @@
 		"@mheob/eslint-config": "^3.1.0",
 		"@mheob/prettier-config": "^2.0.3",
 		"@mheob/tsconfig": "^1.0.1",
-		"@types/node": "^18.11.10",
+		"@types/node": "^18.11.13",
+		"eslint": "^8.29.0",
 		"husky": "^8.0.2",
-		"lint-staged": "^13.0.4",
+		"lint-staged": "^13.1.0",
+		"prettier": "^2.8.1",
 		"ts-node": "^10.9.1",
 		"tsup": "^6.5.0",
-		"typescript": "^4.9.3"
+		"typescript": "^4.9.4"
 	},
 	"publishConfig": {
 		"access": "public"
