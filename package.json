@@ -41,7 +41,7 @@
 		"@commitlint/cli": "^17.4.3",
 		"@commitlint/config-conventional": "^17.4.3",
 		"@mheob/eslint-config": "^4.2.0",
-		"@mheob/prettier-config": "^2.0.3",
+		"@mheob/prettier-config": "^3.0.1",
 		"@mheob/tsconfig": "^1.0.1",
 		"@types/node": "^18.13.0",
 		"eslint": "^8.34.0",
