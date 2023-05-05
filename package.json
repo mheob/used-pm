@@ -1,6 +1,6 @@
 {
 	"name": "used-pm",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Detects what package manager executes the process",
 	"keywords": [
 		"npm",
@@ -13,16 +13,22 @@
 	"license": "MIT",
 	"author": "Alexander Böhm <tools@boehm.work>",
 	"exports": {
-		"import": "./dist/index.js",
-		"require": "./dist/index.cjs"
+		".": {
+			"import": {
+				"types": "./dist/esm/index.d.ts",
+				"default": "./dist/esm/index.js"
+			},
+			"require": {
+				"types": "./dist/cjs/index.d.ts",
+				"default": "./dist/cjs/index.js"
+			}
+		}
 	},
-	"types": "./dist/index.d.ts",
 	"files": [
 		"./dist/"
 	],
 	"scripts": {
-		"build": "tsup",
-		"dev": "tsup --watch",
+		"build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json",
 		"format": "prettier --write \"**/*.{cjs,js,mjs,ts,json,md,mdx,yaml,yml}\"",
 		"lint": "eslint . --ext .cjs,.js,.mjs,.ts --fix --ignore-path .gitignore",
 		"prepare": "ts-node ./scripts/prepare.ts && husky install"
@@ -49,21 +55,9 @@
 		"lint-staged": "^13.2.2",
 		"prettier": "^2.8.8",
 		"ts-node": "^10.9.1",
-		"tsup": "^6.7.0",
 		"typescript": "^5.0.4"
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"tsup": {
-		"clean": true,
-		"entry": [
-			"src/index.ts"
-		],
-		"format": [
-			"cjs",
-			"esm"
-		],
-		"dts": true
 	}
 }

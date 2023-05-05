@@ -3,7 +3,7 @@ interface PackageManager {
 	version: string;
 }
 
-export = (): PackageManager | undefined => {
+export default (): PackageManager | undefined => {
 	const userAgent = process.env.npm_config_user_agent;
 
 	if (!userAgent) return;
