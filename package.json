@@ -38,19 +38,19 @@
 		"package.json": "npx sort-package-json"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.5.1",
-		"@commitlint/config-conventional": "^17.4.4",
+		"@commitlint/cli": "^17.6.3",
+		"@commitlint/config-conventional": "^17.6.3",
 		"@mheob/eslint-config": "^4.2.1",
 		"@mheob/prettier-config": "^3.0.1",
 		"@mheob/tsconfig": "^2.0.0",
-		"@types/node": "^18.15.11",
-		"eslint": "^8.37.0",
+		"@types/node": "^18.16.4",
+		"eslint": "^8.39.0",
 		"husky": "^8.0.3",
-		"lint-staged": "^13.2.0",
-		"prettier": "^2.8.7",
+		"lint-staged": "^13.2.2",
+		"prettier": "^2.8.8",
 		"ts-node": "^10.9.1",
 		"tsup": "^6.7.0",
-		"typescript": "^5.0.3"
+		"typescript": "^5.0.4"
 	},
 	"publishConfig": {
 		"access": "public"
