@@ -1,6 +1,6 @@
 # `used-pm` - What package manager is used?
 
-Simple script what detects what package manager executes the current process.
+Lightweight script to detect which package manager executes the current process.
 
 ## Installation
 
@@ -24,9 +24,9 @@ pnpm add used-pm
 
 ## Usage
 
-In `esm` / `typescript`:
+In `esm`:
 
-```ts
+```js
 import currentPackageManager from 'used-pm';
 
 const { name, version } = currentPackageManager();

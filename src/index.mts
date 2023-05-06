@@ -3,7 +3,7 @@ interface PackageManager {
 	version: string;
 }
 
-export default (): PackageManager | undefined => {
+function getCurrentPackageManager(): PackageManager | undefined {
 	const userAgent = process.env.npm_config_user_agent;
 
 	if (!userAgent) return;
@@ -17,4 +17,6 @@ export default (): PackageManager | undefined => {
 		name: packageManager.slice(0, separatorPosition),
 		version: packageManager.slice(separatorPosition + 1),
 	};
-};
+}
+
+export default getCurrentPackageManager;
