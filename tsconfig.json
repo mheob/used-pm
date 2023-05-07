@@ -1,4 +1,8 @@
 {
 	"extends": "@mheob/tsconfig/commonjs",
-	"include": ["@types/**/*", "scripts/**/*", "src/**/*"]
+	"include": ["@types/**/*", "scripts/**/*", "src/**/*"],
+	"compilerOptions": {
+		"outDir": "dist",
+		"declaration": true
+	}
 }

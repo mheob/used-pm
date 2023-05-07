@@ -15,12 +15,12 @@
 	"exports": {
 		".": {
 			"import": {
-				"types": "./dist/esm/index.d.ts",
-				"default": "./dist/esm/index.js"
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
 			},
 			"require": {
-				"types": "./dist/cjs/index.d.ts",
-				"default": "./dist/cjs/index.js"
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
 			}
 		}
 	},
@@ -28,7 +28,9 @@
 		"./dist/"
 	],
 	"scripts": {
-		"build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json",
+		"build": "rimraf ./dist/* && concurrently \"pnpm build:cjs\" \"pnpm build:esm\"",
+		"build:cjs": "tsc -b ./tsconfig.cjs.json",
+		"build:esm": "tsc -b ./tsconfig.esm.json",
 		"format": "prettier --write \"**/*.{cjs,js,mjs,ts,json,md,mdx,yaml,yml}\"",
 		"lint": "eslint . --ext .cjs,.js,.mjs,.ts --fix --ignore-path .gitignore",
 		"prepare": "ts-node ./scripts/prepare.ts && husky install"
@@ -49,11 +51,13 @@
 		"@mheob/eslint-config": "^4.2.1",
 		"@mheob/prettier-config": "^3.0.1",
 		"@mheob/tsconfig": "^2.0.0",
-		"@types/node": "^18.16.4",
-		"eslint": "^8.39.0",
+		"@types/node": "^18.16.5",
+		"concurrently": "^8.0.1",
+		"eslint": "^8.40.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.2",
 		"prettier": "^2.8.8",
+		"rimraf": "^5.0.0",
 		"ts-node": "^10.9.1",
 		"typescript": "^5.0.4"
 	},
