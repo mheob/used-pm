@@ -1,6 +1,6 @@
 {
 	"name": "used-pm",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Detects what package manager executes the process",
 	"keywords": [
 		"npm",
@@ -32,7 +32,7 @@
 		"build": "rimraf ./dist/* && concurrently \"pnpm build:cjs\" \"pnpm build:esm\"",
 		"build:cjs": "tsc -b ./tsconfig.cjs.json",
 		"build:esm": "tsc -b ./tsconfig.esm.json",
-		"format": "prettier --write \"**/*.{cjs,js,mjs,ts,json,md,mdx,yaml,yml}\"",
+		"format": "prettier --write \"**/*.{cjs,js,mjs,ts,json,md,mdx,yml}\"",
 		"lint": "eslint . --ext .cjs,.js,.mjs,.ts --fix --ignore-path .gitignore",
 		"prepare": "ts-node ./scripts/prepare.ts && husky install"
 	},
