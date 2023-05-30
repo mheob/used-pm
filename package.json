@@ -36,24 +36,27 @@
 		"lint": "eslint . --ext .cjs,.js,.mjs,.ts --fix --ignore-path .gitignore",
 		"prepare": "ts-node ./scripts/prepare.ts && husky install"
 	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
-	},
 	"lint-staged": {
 		"*.{cjs,js,mjs,ts}": "eslint --fix",
 		"!(pnpm-)*.{cjs,js,mjs,ts,json,md,mdx,yaml,yml}": "pnpm exec prettier --write",
 		"package.json": "npx sort-package-json"
 	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.6.3",
-		"@commitlint/config-conventional": "^17.6.3",
+		"@commitlint/cli": "^17.6.5",
+		"@commitlint/config-conventional": "^17.6.5",
+		"@mheob/commitlint-config": "^1.0.1",
 		"@mheob/eslint-config": "^5.0.0",
 		"@mheob/prettier-config": "^3.0.1",
 		"@mheob/tsconfig": "^2.0.0",
 		"@types/node": "^18.16.16",
+		"commitizen": "^4.3.0",
 		"concurrently": "^8.0.1",
+		"cz-git": "^1.6.1",
 		"eslint": "^8.41.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.2",
