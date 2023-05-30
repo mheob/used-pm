@@ -2,6 +2,8 @@
 
 Lightweight script to detect which package manager executes the current process.
 
+Currently, only the package manager `npm`, `yarn` and `pnpm` are supported.
+
 ## Installation
 
 Use your favorite package manager to install `used-pm`. For example:
