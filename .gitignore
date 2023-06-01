@@ -1,6 +1,9 @@
 # build
 dist
 
+# test
+coverage
+
 # dependencies
 node_modules
 .pnpm-debug.log*

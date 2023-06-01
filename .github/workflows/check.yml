@@ -31,3 +31,6 @@ jobs:
 
       - name: Lint files
         run: pnpm run lint
+
+      - name: Test files
+        run: pnpm run test
