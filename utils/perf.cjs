@@ -1,12 +1,13 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console, unicorn/numeric-separators-style */
 
 // i: Thanks to https://github.com/sounisi5011 for this benchmarking script
 
 const { performance } = require('node:perf_hooks');
 
 function benchmark(name, testFunction) {
+	const RUNS = 99999;
 	const start = performance.now();
-	for (let index = 0; index < 9999; index++) {
+	for (let index = 0; index < RUNS; index++) {
 		testFunction();
 	}
 	const end = performance.now();
