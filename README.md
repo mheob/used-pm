@@ -2,7 +2,7 @@
 
 Lightweight script to detect which package manager executes the current process.
 
-Currently, only the package manager `npm`, `yarn` and `pnpm` are supported.
+Currently, only the package manager `bun`, `npm`, `yarn` and `pnpm` are supported.
 
 ## Installation
 
@@ -22,6 +22,12 @@ or
 
 ```sh
 pnpm add used-pm
+```
+
+or
+
+```sh
+bun add used-pm
 ```
 
 ## Usage

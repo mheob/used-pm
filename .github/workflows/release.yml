@@ -1,16 +1,20 @@
-name: Check
+name: Release
 
 on:
-  pull_request:
-  push:
+  release:
+    types: [created]
 
 jobs:
-  check:
-    name: Check
+  release:
+    name: release
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repo
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
@@ -22,15 +26,12 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build files
-        run: pnpm run build
-
-      - name: Lint files
-        run: pnpm run lint
-
-      - name: Test files
-        run: pnpm run test
+      - name: Release binary
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
