@@ -56,7 +56,7 @@
 		"@mheob/eslint-config": "^5.1.1",
 		"@mheob/prettier-config": "^3.1.1",
 		"@mheob/tsconfig": "^2.0.0",
-		"@types/node": "^20.8.9",
+		"@types/node": "^20.8.10",
 		"@vitest/coverage-c8": "^0.33.0",
 		"commitizen": "^4.3.0",
 		"concurrently": "^8.2.2",
