@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^1.1.1
     version: 1.1.1(@commitlint/cli@18.2.0)(commitizen@4.3.0)(cz-git@1.7.1)
   '@mheob/eslint-config':
-    specifier: ^5.1.1
-    version: 5.1.1(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)
+    specifier: ^5.2.0
+    version: 5.2.0(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)
   '@mheob/prettier-config':
     specifier: ^3.1.1
     version: 3.1.1(prettier@3.0.3)
@@ -615,8 +615,8 @@ packages:
       cz-git: 1.7.1
     dev: true
 
-  /@mheob/eslint-config@5.1.1(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2):
-    resolution: {integrity: sha512-rdnhI0GdHecwktCRuDgPpDXmlyMzwGyonA2H6s6rle48qpJ+dAxoLS3XNCte/4inw4PgeDYO2C43dsgi9QDNwA==}
+  /@mheob/eslint-config@5.2.0(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2):
+    resolution: {integrity: sha512-fQsJ39GADUId2NDkuJAvBk8TD+iXjj8kF6PNlFB/JmERrQDn1UAwYm4hJ2myTTFy5ORHXhdyYebfNCd6vBvALg==}
     peerDependencies:
       eslint: ^8.52.0
       prettier: ^3.0.3
