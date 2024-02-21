@@ -50,24 +50,24 @@
 		}
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^18.4.4",
-		"@commitlint/config-conventional": "^18.4.4",
+		"@commitlint/cli": "^18.6.1",
+		"@commitlint/config-conventional": "^18.6.2",
 		"@mheob/commitlint-config": "^1.1.1",
 		"@mheob/eslint-config": "^5.2.0",
 		"@mheob/prettier-config": "^3.2.0",
 		"@mheob/tsconfig": "^2.0.0",
-		"@types/node": "^20.11.5",
-		"@vitest/coverage-v8": "^1.2.2",
+		"@types/node": "^20.11.19",
+		"@vitest/coverage-v8": "^1.3.1",
 		"commitizen": "^4.3.0",
 		"concurrently": "^8.2.2",
 		"cz-git": "^1.8.0",
 		"eslint": "^8.56.0",
 		"husky": "^9.0.0",
-		"lint-staged": "^15.2.0",
-		"prettier": "^3.2.4",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.3.3",
-		"vitest": "^1.2.1"
+		"vitest": "^1.3.1"
 	},
 	"publishConfig": {
 		"access": "public"
