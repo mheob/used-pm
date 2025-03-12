@@ -20,8 +20,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
-          cache: "pnpm"
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -33,4 +33,4 @@ jobs:
         run: pnpm run lint
 
       - name: Test files
-        run: pnpm run test
+        run: pnpm run test:cov
