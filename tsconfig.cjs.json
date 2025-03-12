@@ -1,7 +1,7 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["@types/**/*", "src/**/index.cts"],
 	"compilerOptions": {
 		"module": "CommonJS"
-	}
+	},
+	"include": ["@types/**/*", "src/**/index.cts"]
 }

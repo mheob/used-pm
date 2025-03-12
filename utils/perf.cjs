@@ -11,7 +11,7 @@ function benchmark(name, testFunction) {
 		testFunction();
 	}
 	const end = performance.now();
-	console.log(name, end - start + 'ms');
+	console.log(name, `${end - start}ms`);
 }
 
 const userAgent = 'npm/6.14.18 node/v18.16.0 linux x64 ci/github-actions';
@@ -23,7 +23,7 @@ benchmark(`userAgent.split(' ')[0]`, () => userAgent.split(' ')[0]);
 benchmark(`userAgent.split(' ', 1)[0]`, () => userAgent.split(' ', 1)[0]);
 benchmark(`userAgent.indexOf(' ')`, () => {
 	const userAgentSeparatorPosition = userAgent.indexOf(' ');
-	return userAgentSeparatorPosition < 0
+	return userAgentSeparatorPosition === -1
 		? userAgent
 		: userAgent.slice(0, userAgentSeparatorPosition);
 });
