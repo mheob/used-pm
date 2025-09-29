@@ -50,8 +50,8 @@
 		}
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^19.8.0",
-		"@commitlint/config-conventional": "^19.8.0",
+		"@commitlint/cli": "^20.0.0",
+		"@commitlint/config-conventional": "^20.0.0",
 		"@mheob/commitlint-config": "^1.2.1",
 		"@mheob/eslint-config": "^8.2.0",
 		"@mheob/prettier-config": "^3.3.3",
